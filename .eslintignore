@@ -1,0 +1,5 @@
+*.pug
+/node_modules/
+/dist/
+/src/lib/
+
