@@ -1,0 +1,123 @@
+body
+  hobo()
+
+// main elements
+h1, h2, h3
+  gill()
+  text-transform uppercase
+
+h1
+  font-size 48px
+
+h2
+  font-size 27px
+
+h3
+  font-size 22px
+
+h4
+  font-size 28px
+
+h5
+  font-size 24px
+
+a
+  transition all 0.3s ease
+  text-decoration none
+  color inherit
+
+.flex
+  display flex
+  justify-content space-between
+
+nav
+  gill()
+  text-transform uppercase
+  font-size 16px
+
+section, nav
+  .content
+    width 100%
+    max-width 1280px
+    margin 0 auto
+
+// alignments
+$alignments := {left: left, right: right, center: center}
+
+for k, v in $alignments
+
+  .{k}--text
+    text-align v
+
+// padding and margins
+$space_names := {
+  p: padding,
+  m: margin,
+}
+
+for n in 0..10
+
+  for k, v  in $space_names
+
+    .{k}l-{n}
+      {v}-left n*$space !important
+
+    .{k}r-{n}
+      {v}-right n*$space !important
+
+    .{k}t-{n}
+      {v}-top n*$space !important
+
+    .{k}b-{n}
+      {v}-bottom n*$space !important
+
+    .{k}x-{n}
+      {v}-left n*$space !important
+      {v}-right n*$space !important
+
+    .{k}y-{n}
+      {v}-top n*$space !important
+      {v}-bottom n*$space !important
+
+    .{k}a-{n}
+      {v} 0 !important
+
+// content and columns layout
+.content
+  display flex
+
+.col-content
+  padding 30px 52px 40px 52px
+
+for n in 1..5
+  .col-layout--{n}
+    for m in 1..n
+      .col--{m}
+        width (100% / n) * m
+        &--less
+          width (100% / n) * m - (10% / n)
+        &--more
+          width (100% / n) * m + (10% / n)
+
+// color classes
+for name, color in $colors
+  .{name}--bg
+    background-color color
+    border-color color
+
+  .{name}--text
+    color color !important
+
+// globals
+.new-window
+  display inline-block
+  opacity 0
+  // transition opacity 0.1s ease
+  width 28px
+  path
+    fill $white
+
+a[target=_blank]:hover
+  .new-window
+    opacity 1
+

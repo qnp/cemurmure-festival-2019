@@ -1,0 +1,127 @@
+doctype html
+html(lang='fr')
+  head
+    meta(charset="utf-8")
+
+    title Ce Murmure Festival 2018
+
+  body
+    nav.red--bg.blue--text
+      .content.col-layout--1
+        .col--1
+          .col-content.flex
+            a(href='/') édition 2018
+            a(href='/festival_asso') le festival &amp; l’asso
+            a(href='/infos_pratiques') infos pratiques
+            a(href='/presse') presse
+
+    section.red--bg
+      .content.col-layout--1
+        .col--1
+          .col-content
+            img(src='/static/typos/main_title.svg')
+
+      .content.col-layout--3
+        .col--2--less
+          .col-content.pr-2
+            img(src='/static/typos/date_typo.svg')
+
+        .col--1--more
+          .col-content.white--text.right--text.pl-0
+            h4.mt-1
+              | Semur-en-Auxois
+              br
+              | Parc des Quinconces
+              br
+              br
+              | Spectacle vivant
+              br
+              | Animations Homemade
+              br
+              | Art Numérique
+              br
+              br
+              | Buvette &amp; Restauration
+              br
+              | Produits locaux &amp; et artisanaux
+
+            .logos.pt-4
+              for n in [1,2,3,4,5,6,7,8]
+                img(id='logo-'+n, src='/static/logos/logo_'+n+'.svg')
+
+    section.pink--bg.blue--text
+      .content.col-layout--1
+        .col--1
+          .col-content.flex.pb-0.red--text
+            for n in [1,2,3,4,5]
+              h2 vendredi 24
+          .col-content.pt-1
+            h3 à partir de 18h
+
+          .col-content.groups
+
+            - var fridayGroups = [{
+            -   name: 'Benaver',
+            -   image: 'benaver.png',
+            -   description: 'Hip-hop cosmique empreint d’un métissage aux couleurs blues, soul et jazz.'
+            - }, {
+            -   name: 'Freez',
+            -   image: 'freez.png',
+            -   description: 'Hip-hop cosmique empreint d’un métissage aux couleurs blues, soul et jazz.'
+            - }, {
+            -   name: 'Stamp',
+            -   image: 'stamp.png',
+            -   description: 'Hip-hop cosmique empreint d’un métissage aux couleurs blues, soul et jazz.'
+            - }, {
+            -   name: 'Scrotum',
+            -   image: 'scrotum.png',
+            -   description: 'Hip-hop cosmique empreint d’un métissage aux couleurs blues, soul et jazz.'
+            - }];
+
+            for group in fridayGroups
+
+              a(href='/', target='_blank')
+                .group
+                  h1= group.name
+                    .new-window!=require('@/assets/pictos/open_new_window.svg')
+                  p= group.description
+                  img(src='/static/img/groups/'+group.image)
+
+    section.green--bg.blue--text
+      .content.col-layout--1
+        .col--1
+          .col-content.flex.pb-0.pink--text
+            for n in [1,2,3,4,5]
+              h2 samedi 25
+          .col-content.pt-1
+            h3 à partir de 14h
+
+          .col-content.groups
+
+            - var saturdayGroups = [{
+            -   name: 'Yoha and the dragon tribe',
+            -   image: 'yoha-dragon.png',
+            -   description: 'Hip-hop cosmique empreint d’un métissage aux couleurs blues, soul et jazz.'
+            - }, {
+            -   name: 'Freez',
+            -   image: 'freez.png',
+            -   description: 'Hip-hop cosmique empreint d’un métissage aux couleurs blues, soul et jazz.'
+            - }, {
+            -   name: 'Stamp',
+            -   image: 'stamp.png',
+            -   description: 'Hip-hop cosmique empreint d’un métissage aux couleurs blues, soul et jazz.'
+            - }, {
+            -   name: 'Scrotum',
+            -   image: 'scrotum.png',
+            -   description: 'Hip-hop cosmique empreint d’un métissage aux couleurs blues, soul et jazz.'
+            - }];
+
+            for group in saturdayGroups
+
+              a(href='/', target='_blank')
+                .group
+                  h1= group.name
+                    .new-window!=require('@/assets/pictos/open_new_window.svg')
+                  p= group.description
+                  img(src='/static/img/groups/'+group.image)
+
