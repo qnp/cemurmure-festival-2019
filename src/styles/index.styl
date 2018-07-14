@@ -4,16 +4,21 @@
 @import 'global/generic.styl'
 @import 'global/layout.styl'
 
-nav
-  a:hover
-    color $green
+// nav
+//   a:hover
+//     color $green
 
-.logos
+
+.logos, .logos-small
   display flex
   justify-content space-between
   flex-wrap wrap
+  align-items center
   img
     margin 0 14px
+
+.logos-small
+  display none
 
 #logo-1
   height 31px
@@ -39,27 +44,143 @@ nav
 #logo-8
   height 34px
 
+.date-typo
+  padding-right 14px
+
 .groups
   position relative
+
   .group
     padding-bottom 34px
     h1
-      max-width 460px
+      max-width 510px
+      margin-bottom 10px
       transition color 0.3s ease
     p
+      line-height 1
       max-width 350px
       transition color 0.3s ease
+      &.big
+        max-width 470px
     img
-      width 100%
+      width 37%
       max-width 480px
       position absolute
-      top 0
-      right 0
+      top 38px
+      right 52px
+    img.date
+      z-index 0
+    img.group-img
+      z-index 1
       opacity 0
       transition opacity 0.3s ease
-    &:hover
+
+  a:hover
+    .group
       h1, p
         color $white
-      img
+      img.group-img
         opacity 1
 
+  &.friday
+    padding-bottom 100px
+    .new-window
+      margin-left 15px
+
+  &.saturday
+    .group
+      float right
+      text-align right
+      p
+        float right
+      img
+        right auto
+        left 52px
+
+.section-2-bg
+  display flex
+  position absolute
+  top 0
+  bottom 0
+  width 100%
+
+.new-window.rebus
+  position absolute
+  top 22px
+  right 52px
+
+.rebus-rebut
+  path
+    transition fill 0.3s ease
+
+a:hover
+  .rebus-rebut
+    path
+      fill $green
+
+@media only screen and (max-width: 1249px)
+  .logos
+    display none
+  .logos-small
+    display flex
+  .date-list
+    h3:nth-child(5)
+      display none
+
+@media only screen and (max-width: 986px)
+  .groups
+    .group
+      img.date
+        display none
+      img
+        width 100%
+        max-width 480px
+        position static
+        padding-top 25px
+        padding-bottom 15px
+      img.group-img
+        opacity 1
+    &.friday
+      padding-bottom 5%
+
+@media only screen and (max-width: 1011px)
+  .date-list
+    h3:nth-child(4)
+      display none
+
+@media only screen and (max-width: 781px)
+  .date-list
+    h3:nth-child(3)
+      display none
+
+@media only screen and (max-width: 565px)
+  .date-list
+    h3:nth-child(2)
+      display none
+
+
+@media only screen and (max-width: 808px)
+  .date-typo
+    padding-right 52px
+
+  .logos-small
+    img
+      margin 10px 40px
+
+@media only screen and (max-width: 688px)
+
+  .logos-small
+    img
+      margin 10px 30px
+
+@media only screen and (max-width: 608px)
+
+  .logos-small
+    img
+      margin 10px 20px
+
+@media only screen and (max-width: 528px)
+
+  .logos-small
+    img
+      margin 10px 15px
