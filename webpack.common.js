@@ -9,6 +9,16 @@ const entries = [
     name: 'index',
     metas: metas,
   },
+  {
+    name: 'festival_asso',
+    outputPoint: 'festival_asso/index.html',
+    metas: metas,
+  },
+  {
+    name: 'infos_pratiques',
+    outputPoint: 'infos_pratiques/index.html',
+    metas: metas,
+  },
 ];
 /* */
 
@@ -171,6 +181,10 @@ module.exports = {
       net: 'empty',
       tls: 'empty',
       child_process: 'empty'
+    },
+    externals: {
+      jquery: 'jQuery',
+      galleria: 'Galleria',
     }
   }
 };

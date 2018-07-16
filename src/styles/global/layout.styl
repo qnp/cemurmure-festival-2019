@@ -19,11 +19,18 @@ h3
 
 h4
   font-size 28px
+  &.big
+    font-size 36px
+    line-height 48px
 
 h5
   text-align center
   font-size 24px
   line-height 26px
+  &.v2
+    text-align left
+    font-size 24px
+    line-height 32px
 
 a
   transition all 0.3s ease
@@ -31,7 +38,7 @@ a
   color inherit
 
 a.text
-  background-image linear-gradient(to bottom, $green 0%, $green  100%)
+  background-image linear-gradient(to right, $green 0%, $green  100%)
   background-position 0 100%
   background-repeat no-repeat
   background-size 0 100%
@@ -41,7 +48,7 @@ a.text
 
 p
   font-size 18px
-  line-height 22px
+  line-height 23px
 
 small
   font-size 12px
@@ -72,7 +79,7 @@ nav
       width 20px
       display inline-block
       line
-        stroke $blue
+        stroke currentColor
         stroke-width 4px
 
 .spacing
@@ -87,11 +94,20 @@ section, nav, footer
     max-width 1280px
     margin 0 auto
 
+@media only screen and (max-width: 1148px)
+  h5
+    font-size 22px
+    line-height 24px
+
 @media only screen and (max-width: 1011px)
   h4
     font-size 22px
 
-@media only screen and (max-width: 800px)
+  h5
+    font-size 18px
+    line-height 20px
+
+@media only screen and (max-width: 808px)
   h1
     font-size 44px
 
@@ -105,11 +121,18 @@ section, nav, footer
 
   h4
     font-size 25px
+    &.big
+      font-size 32px
+      line-height 44px
 
   h5
-    font-size 22px
-    line-height 24px
+    font-size 24px
+    line-height 26px
+    &.v2
+      font-size 20px
+      line-height 28px
 
+@media only screen and (max-width: 956px)
   nav
     .burger
       display block
@@ -124,6 +147,11 @@ section, nav, footer
 
   .spacing
     display block
+
+@media only screen and (max-width: 600px)
+  h4.big
+    font-size 20px
+    line-height 28px
 
 @media only screen and (max-width: 500px)
   h5
@@ -164,7 +192,7 @@ $space_names := {
   m: margin,
 }
 
-for n in 0..10
+for n in 0..16
 
   for k, v  in $space_names
 
@@ -266,3 +294,22 @@ a[target=_blank]:hover
 
 .clear
   clear both
+
+.section-2-bg
+  display flex
+  position absolute
+  top 0
+  bottom 0
+  width 100%
+
+// full image layout
+.image
+  width 100%
+  position relative
+  background-size cover
+  background-position center center
+
+.image::before
+  content ''
+  display block
+  padding-bottom 50%

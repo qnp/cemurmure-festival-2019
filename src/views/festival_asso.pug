@@ -1,0 +1,86 @@
+doctype html
+html(lang='fr')
+  head
+    meta(charset="utf-8")
+
+    include includes/rich-data.pug
+
+    title Ce Murmure Festival 2018
+
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/galleria.min.js")
+
+  body
+    nav.blue--bg.white--text
+      include includes/nav-content.pug
+
+    section.blue--bg.white--text
+      .content.col-layout--1
+        .col--1
+          .col-content.py-10.my-6
+            h2 Le festival
+            h4.big.mt-7 En 2012, un groupe d’amis passionnés par les arts vivants et numériques, décide de créer un festival « homemade » et électique, à son image. Chacun apporterait sa contribution, sur la base de son expérience et de ses passions. Depuis, le festival a lieu chaque  n d’été, mêlant les arts sous toutes ses formes a n d’offrir au public un moment convivial, de découverte et de détente.
+
+    section.green--bg.white--text
+      .content.col-layout--1
+        .col--1
+          .col-content.pt-7
+            h2 Notre engagement - un festival au vert
+      .content.col-layout--2
+        .col--1
+          .col-content
+            h5.v2 Dès sa création, les organisateurs du festival ont eu à cœur de proposer un évènement ancré dans son environnement et son terroir: mettre en valeur le lieu occupé, développer des partenariats avec des artisans et producteurs locaux et produire/selon un principe de récupération sont les maîtres mots. En effet, à l’heure de la consommation de masse, il nous semble important de démontrer que l’on peut consommer « raisonné » et de qualité.
+        .col--1
+          .col-content
+            h5.v2 Notre festival a toujours été inscrit dans une démarche écologique et nous souhaitons continuer à utiliser des matériaux biodégradables et à réduire au maximum la production de déchets du festival. Pour cela, plusieurs actions ont été mises en œuvre : l’utilisation de toilettes sèches, de gobelets réutilisables et d’assiettes en matière recyclable et/ou biodégradable, l’installation de poubelles favorisant le tri sélectif ou encore la distribution de cendriers de poche.
+
+      .content.col-layout--1
+        .col--1
+          .col-content.pt-7
+            h2 RESTAURATION ET BUVETTE
+      .content.col-layout--2
+        .col--1
+          .col-content
+            h5.v2 La restauration est assurée par les membres de l’association, de la plantation des pommes de terre à la conception des repas. Les produits utilisés sont achetés chez des producteurs locaux.
+        .col--1
+          .col-content
+            h5.v2 Légumes chez un maraîcher bio de la région – Charcuterie du Morvan – Fromage d’Époisses mis en valeur en sauce et sandwich – Bière artisanale de Dijon – Jus de fruit et limonade bios de Dijon et du Jura – Vin de Bourgogne
+
+      .content.col-layout--1
+        .col--1
+          .col-content.gallery.pt-7
+            h2.pb-7 éditions précédentes en images
+
+            .galleria
+              - var imgarr = new Array(36)
+              for k, i in imgarr
+                img(src='/static/img/2017/img'+(i+1)+'.jpg')
+
+
+
+    section.orange--bg.white--text
+      .content.col-layout--1
+        .col--1
+          .col-content.pt-7
+            h2 L'asso – L’équipe
+      .content.col-layout--2
+        .col--1
+          .col-content
+            h5.v2 Passionné.e.s de musique et d’arts de tous horizons, bricoleurs et bricoleuses, fêtard.e.s et artistes également, un groupe d’ami soudé et motivé décide de faire bouger sa région dans la belle ville de Semur-en-Auxois. Ce groupe d’amis grandit chaque année avec de  nouvelles personnes enthousiastes et déterminées qui nous rejoignent.
+        .col--1
+          .col-content
+            h5.v2 Chacun s’exprime à travers son art, ses compétences et son savoir personnel, et toutes les générations sont présentes ! (parents, petit frêres et sœurs, ...) À chaque édition, ambiance familliale, festive et stimulante assurée !
+            br
+            br
+            h5.v2
+              a.text(href='mailto:raspatakouet@gmail.com?subject=Je souhaite rejoindre l’équipe !') Rejoignez-nous !
+
+      .content.col-layout--1
+        .col--1
+          .col-content.pt-7.mb-7
+            .image(style='background-image: url(/static/img/asso.jpg)')
+
+
+
+  footer.blue--bg.white--text
+    include includes/footer-content.pug

@@ -3,26 +3,13 @@ html(lang='fr')
   head
     meta(charset="utf-8")
 
+    include includes/rich-data.pug
+
     title Ce Murmure Festival 2018
 
   body
     nav.red--bg.blue--text
-      .content.col-layout--1
-        .col--1
-          .col-content.pb-0
-            .burger
-              - var w = 24;
-              - var h = 20;
-              svg(viewBox=`0 0 ${w} ${h}`)
-                line(x1=0, y1=2, x2=w, y2=0)
-                line(x1=0, y1=h/2+1, x2=w, y2=h/2-1)
-                line(x1=0, y1=h, x2=w, y2=h-2)
-              span.ml-1 MENU
-            .nav-content
-              a.text(href='/') édition 2018
-              a.text(href='/festival_asso') le festival &amp; l’asso
-              a.text(href='/infos_pratiques') infos pratiques
-              a.text(href='/presse') presse
+      include includes/nav-content.pug
 
     section.red--bg
       .spacing
@@ -178,31 +165,4 @@ html(lang='fr')
           h5 Samedi après midi, venez avec vos enfants pour assister au spectacle participatif pour petits et grands : Rébus de rebuts. C'est un jeu amusant qui consiste à faire deviner une suite d'objets. Avec leur sonorité, on découvre alors un mot, une phrase ou une expression !
 
   footer.blue--bg.white--text
-    .content.col-layout--2
-      .col--1
-        .col-content
-          h3 Nous contacter
-          br
-          p Association Raspatakouet
-            br
-            a.text(href='mailto:raspatakouet@gmail.com') raspatakouet@gmail.com
-            br
-            span 06 85 90 01 02
-      .col--1
-        .col-content
-          h3 Suivez nous !
-          br
-          p
-            a.text(href='https://www.facebook.com/cemurmure') Facebook
-          br
-          p
-            a.text(href='https://www.instagram.com/raspatakouet') Instagram
-      .col--1
-        .col-content
-          small &copy; Raspatakouet 2018
-          br
-          small Design :&nbsp;
-            a.text(href='http://maison-solide.fr/') Solide
-          br
-          small Dev :&nbsp;
-            a.text(href='http://francoisrisoud.com/') François Risoud
+    include includes/footer-content.pug
