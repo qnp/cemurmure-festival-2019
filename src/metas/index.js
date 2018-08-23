@@ -17,6 +17,9 @@ module.exports = {
   // viewport
   viewport: 'width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui',
 
+  // google verification
+  'google-site-verification': 'sH9FFytCvxlxNWqJypZGd-0gNxUGTdfdDM6OAM1UxTY',
+
   // theme color
   'theme-color': theme_color,
 
