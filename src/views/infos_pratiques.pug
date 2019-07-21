@@ -11,14 +11,14 @@ html(lang='fr')
     script(src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/galleria.min.js")
 
   body
-    nav.green--bg.blue--text.infos-pratiques
+    nav.orange--bg.blue--text
       include includes/nav-content.pug
 
-    section.green--bg.white--text
+    section.red--bg.white--text
       .content.col-layout--2.py-16
         .col--1
           .col-content
-            h2 VENIR
+            h2.pink--text VENIR
             h4.big.mt-7 PARC DES QUINCONCES
               br
               | et Esplanade René Cassin
@@ -43,7 +43,7 @@ html(lang='fr')
 
         .col--1
           .col-content
-            h2 DORMIR
+            h2.pink--text DORMIR
             h4.big.mt-7 Camping Gratuit !
               br
               | Il se situe à quelques pas :  au Chemin des Enlerys à Semur.
@@ -53,7 +53,7 @@ html(lang='fr')
             br
             br
             br
-            h2 SE GARER
+            h2.pink--text SE GARER
             h4.big.mt-7 C'est Gratuit !
               br
               | Mais venez à vélo plutôt et voyez comme la Bourgogne est belle 🚲
@@ -62,10 +62,10 @@ html(lang='fr')
       .content.col-layout--2
         .col--1
           .col-content.py-7.mb-2
-            h2 LES HORAIRES
-            h4.big.mt-7 Vendredi 24 août : 18h - 2h
+            h2.orange--text LES HORAIRES
+            h4.big.mt-7 Vendredi 23 août : 18h - 2h
               br
-              | Samedi 25 août : 14h - 2h
+              | Samedi 24 août : 14h - 2h
               br
               br
               | Camping
@@ -73,7 +73,7 @@ html(lang='fr')
               | Ouverture des portes vendredi 25 août à midi et fermeture dimanche 26 août à 16h.
         .col--1
           .col-content.py-7.mb-2
-            h2 LE PRIX
+            h2.orange--text LE PRIX
             h4.big.mt-7 6€ pour 1 jour
               br
               | 10€ pass 2 jours
@@ -84,35 +84,21 @@ html(lang='fr')
               br
               | Entrées vendues sur place
 
-    section.white--text
-      .section-2-bg.col-layout--2
-        .col--1.green--bg
-          .col-content
-        .col--1.red--bg
-          .col-content
-      .content.col-layout--2
-        .col--1.v-sized--90
-          a(href='mailto:raspatakouet@gmail.com?subject=Je souhaite être bénévole !')
-            .col-content.green--bg.flex--col.v-sized--content
+    section.green--bg.white--text
+      .content.col-layout--1
+        .col--1
+          a(href='https://docs.google.com/forms/d/e/1FAIpQLSfWtAc4EB3LWt_JVMf7H4eyaoePj9iGDW4TgfP3cUBr_5B7yA/viewform?fbclid=IwAR3e88Le2GMqhxCoqkiMyf1fpnk6B-MQ7oEIpaHXeAdwWZ6tQw28ybD62WVM', target='_blank')
+            .col-content.flex--col.v-sized--content
               h4.big.center--text DEVENEZ
               .benevole!=require('@/assets/typos/benevole.svg')
-              h4.big.center--text ÉCRIVEZ-NOUS !
-        .col--1.v-sized--90
-          a(href='https://www.kisskissbankbank.com/fr/projects/ce-murmure-festival-2018', target='_blank')
-            .col-content.red--bg.flex--col.v-sized--content
-              h4.big.center--text GIVE US JUST A
-              .new-window.kiss-kiss!=require('@/assets/pictos/open_new_window.svg')
-              .kiss-kiss-img!=require('@/assets/typos/kiss_kiss.svg')
-              h4.big.center--text À VOT’ BON COEUR &nbsp;
-                span.heart.blue--text ❤
 
-    section.pink--bg.white--text
+    section.pink--bg
       .content.col-layout--1
         .col--1
           .col-content.py-7.mb-2
-            h2 QUELQUES RÈGLES POUR RESTER MIGNON
-            h3.mt-1 ET QU’ON PUISSE RECOMMENCER L’ANNÉE PROCHAINE
-            h5.v2.pt-10 Quels sont les objets interdits sur le festival ?
+            h2.blue--text QUELQUES RÈGLES POUR RESTER MIGNON
+            h3.red--text.mt-1 ET QU’ON PUISSE RECOMMENCER L’ANNÉE PROCHAINE
+            h5.blue--text.v2.pt-10 Quels sont les objets interdits sur le festival ?
               br
               | Pour le confort de tous : L’introduction d’alcool, et autres contenants (gourdes, verres, bouteilles etc.)
               br

@@ -5,25 +5,22 @@ html(lang='fr')
 
     include includes/rich-data.pug
 
-    title Ce Murmure Festival 2018
+    title Ce Murmure Festival 2019
 
   body
-    nav.red--bg.blue--text
+    nav.orange--bg.blue--text
       include includes/nav-content.pug
 
-    section.red--bg
+    section.trame--bg
       .spacing
       .content.col-layout--1
         .col--1
-          .col-content.titles
-            img(src='/static/typos/main_title.svg')
+          .col-content.titles.logo-2019
+            img(src='/static/typos/logo_2019.svg')
 
+    section.trame--bg.dark
       .content.col-layout--3
-        .col--2--less
-          .col-content.date-typo.titles
-            img(src='/static/typos/date_typo.svg')
-
-        .col--1--more
+        .col--1
           .col-content.white--text.right--text.pl-0
             .main-info.mt-1
               h4 Semur-en-Auxois
@@ -31,6 +28,9 @@ html(lang='fr')
                 | Parc des Quinconces
               br
               br
+        .col--1
+          .col-content.white--text.right--text.pl-0
+            .main-info.mt-1
               h4 Spectacle vivant
                 br
                 | Animations Homemade
@@ -38,6 +38,9 @@ html(lang='fr')
                 | Art Numérique
               br
               br
+        .col--1
+          .col-content.white--text.right--text.pl-0
+            .main-info.mt-1
               h4 Buvette &amp; Restauration
                 br
                 | Produits locaux &amp; et artisanaux
@@ -65,25 +68,25 @@ html(lang='fr')
           .col-content.groups.friday
 
             - var fridayGroups = [{
-            -   name: 'Benaver',
-            -   image: 'benaver.png',
-            -   description: 'Groupe de rock festif made in Burgundy, vainqueur du tremplin 2018',
-            -   link: 'https://www.facebook.com/benaverlegroupe'
+            -   name: 'LSP',
+            -   image: 'images-groupes5.jpg',
+            -   description: 'Jazz Funk Rock',
+            -   link: 'https://www.facebook.com/LSP-251617578826806/'
             - }, {
-            -   name: 'Freez',
-            -   image: 'freez.png',
-            -   description: 'Hip-hop cosmique empreint d’un métissage aux couleurs blues, soul et jazz',
-            -   link: 'https://www.facebook.com/FreezTheBand'
+            -   name: 'The Bongo Hop',
+            -   image: 'images-groupes6.jpg',
+            -   description: 'Afro Caribéen',
+            -   link: 'http://www.underdogrecords.fr/artistes/the-bongo-hop/'
             - }, {
-            -   name: 'Stamp',
-            -   image: 'stamp.png',
-            -   description: 'Pop-rock progressif puissant et envoutant, aux influences multiples',
-            -   link: 'https://www.facebook.com/stampmusique'
+            -   name: 'Janice de Rosa',
+            -   image: 'images-groupes4.jpg',
+            -   description: 'Blues Métisse',
+            -   link: 'https://www.youtube.com/watch?v=4QZkuWceyUA'
             - }, {
-            -   name: 'Scrotum',
-            -   image: 'scrotum.png',
-            -   description: 'Punk énergique aux paroles incisives... Gare aux pogos !',
-            -   link: 'https://scrotumpunk.bandcamp.com'
+            -   name: 'Blue Orchid',
+            -   image: 'images-groupes3.jpg',
+            -   description: 'Rock Garage',
+            -   link: 'https://www.facebook.com/Blue-Orchid-694840170611470/'
             - }];
 
             for group in fridayGroups
@@ -93,13 +96,13 @@ html(lang='fr')
                   h1= group.name
                     .new-window!=require('@/assets/pictos/open_new_window.svg')
                   p= group.description
-                  img.date(src='/static/typos/24_aout.svg')
+                  img.date(src='/static/typos/23_aout.svg')
                   img.group-img(src='/static/img/groups/'+group.image)
 
-    section.green--bg.blue--text
+    section.red--bg.pink--text
       .content.col-layout--1
         .col--1
-          .col-content.flex.pb-0.pink--text.date-list
+          .col-content.flex.pb-0.orange--text.date-list
             for n in [1,2,3,4,5]
               h3.big samedi 25
           .col-content.pt-1
@@ -108,27 +111,20 @@ html(lang='fr')
           .col-content.groups.saturday
 
             - var saturdayGroups = [{
-            -   name: 'Manu and the red coffee',
-            -   image: 'manu-coffee.png',
-            -   description: 'Trio parisien distillant un Blues intense aux influences Soul et Folk',
-            -   link: 'https://www.facebook.com/manuandtheredcoffee',
+            -   name: 'Oddloops',
+            -   image: 'images-groupes2.jpg',
+            -   description: 'Jazz Hip-hop',
+            -   link: 'https://oddloops.bandcamp.com/releases',
             - }, {
-            -   name: 'Yoha and the dragon tribe',
-            -   image: 'yoha-dragon.png',
-            -   description: 'Groupe dijonais de Reggae et World Music, plein d’énergie positive',
-            -   link: 'https://www.facebook.com/yohaandthedragontribe',
+            -   name: 'William Brutus',
+            -   image: 'images-groupes7.jpg',
+            -   description: 'Reggae World Soul',
+            -   link: 'http://williamsbrutus.com/',
             - }, {
-            -   name: 'Alpha Petulay',
-            -   image: 'alpha-petulay.png',
-            -   description: 'Charismatique auteur-compositrice, crée un univers musical influencé de Rock, Rumba et grooves downtempo',
-            -   big: true,
-            -   link: 'https://www.facebook.com/AlphaPetulayOfficiel',
-            - }, {
-            -   name: 'Boboundé',
-            -   image: 'bobounde.png',
-            -   description: 'DJ set d’une grande diversité, des années 60/70 aux remixs actuels empreints, de sonorités du monde entier',
-            -   big: true,
-            -   link: 'https://soundcloud.com/bobounde',
+            -   name: 'Waraba Sound',
+            -   image: 'images-groupes1.jpg',
+            -   description: 'DJ Set - Worldwilde Mix',
+            -   link: 'https://www.facebook.com/WARABASOUND/',
             - }];
 
             for group in saturdayGroups
@@ -141,28 +137,40 @@ html(lang='fr')
                     span=group.name
                   p(class=group.big?'big':'')= group.description
                   .clear
-                  img.date(src='/static/typos/25_aout.svg')
+                  img.date(src='/static/typos/24_aout.svg')
                   img.group-img(src='/static/img/groups/'+group.image)
                 .clear
+            .spacing-group
 
-  section.white--text
-    .section-2-bg.col-layout--2
-      .col--1.orange--bg
-        .col-content
-      .col--1.pink--bg
-        .col-content
+
+  section.blue--text.orange--bg
+    .content.col-layout--1
+      .col--1
+        .col-content.pt-7
+          h2.red--text Animations et ateliers
     .content.col-layout--2
-      .col--1.v-sized--90
-        .col-content.orange--bg.flex--col.v-sized--content
-          h5 Un grand nombre d’animations interactives et d’ateliers auront lieu sur le festival pendant les 2 jours. Carabinophotomaton, boîte musicale, fractaléidoscope, histoirotron, jackpot, projections de courts métrages, jeux en bois...
-          img(src='/static/typos/animations_home_made.svg')
-      .col--1.v-sized--90
-        .col-content.pink--bg.flex--col.v-sized--content
-          h5.green--text SPECTACLE POUR ENFANTS
-          a(href='https://www.facebook.com/lacompagniedesagreables', target='_blank')
-            .new-window.rebus!=require('@/assets/pictos/open_new_window.svg')
-            .rebus-rebut!=require('@/assets/typos/rebus_de_rebut.svg')
-          h5 Samedi après midi, venez avec vos enfants pour assister au spectacle participatif pour petits et grands : Rébus de rebuts. C'est un jeu amusant qui consiste à faire deviner une suite d'objets. Avec leur sonorité, on découvre alors un mot, une phrase ou une expression !
+      .col--1
+        .col-content
+          h5.v2 Un grand nombre d’animations interactives et d’ateliers auront lieu sur le festival pendant les 2 jours:
+          br
+          ul.red--text
+            li Une toute nouvelle version du Carabinophotomaton
+            li Boîte musicale
+            li H.O.M.E.R, la machine à histoire
+            lo Jackpot humain
+            li Projections de courts métrages
+            li Jeux vidéos
+      .col--1
+        .col-content
+          h5.v2 Cette année, des collectifs ont également été invités pour nous faire découvrir leur univers artistique et inventif:&nbsp;
+            br
+            br
+            h4
+              a.text(href='https://mamatus.fr/' target='_blank') Mamatus
+            br
+            h4 le fablab de Semur-en-Auxois
+          br
+
 
   footer.blue--bg.white--text
     include includes/footer-content.pug

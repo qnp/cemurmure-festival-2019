@@ -8,6 +8,19 @@
 //   a:hover
 //     color $green
 
+.trame--bg
+  background-image url('/static/img/trame.png')
+  background-size 831px 542px
+  background-repeat repeat
+  background-color #fff
+  &.dark
+    background-image url('/static/img/trame-dark.png')
+
+
+.logo-2019
+  max-width 700px
+  margin 0 auto
+
 
 .logos, .logos-small
   display flex
@@ -20,6 +33,12 @@
 
 .logos
   display none
+
+.spacing-group
+  height 180px
+  @media only screen and (max-width: 986px)
+    height 0
+
 
 $k = 2
 

@@ -1,9 +1,9 @@
 body
-  hobo()
+  novenco()
 
 // main elements
 h1, h2, h3
-  gill()
+  novenco()
   text-transform uppercase
 
 h1
@@ -38,13 +38,14 @@ a
   color inherit
 
 a.text
+  padding-bottom 2px
   background-image linear-gradient(to right, $green 0%, $green  100%)
   background-position 0 100%
   background-repeat no-repeat
-  background-size 0 100%
+  background-size 0 2px
   transition background-size 0.3s ease-in-out
   &:hover
-    background-size 100% 100%
+    background-size 100% 2px
 
 p
   font-size 18px
@@ -64,7 +65,7 @@ small
   justify-content space-between
 
 nav
-  gill()
+  novenco()
   text-transform uppercase
   font-size 16px
 
@@ -81,6 +82,21 @@ nav
       line
         stroke currentColor
         stroke-width 4px
+
+  .dossier-presse--link::after
+    content '(2018)'
+    position absolute
+    margin-left 5px
+    opacity 0
+    transition opacity 0.3s ease
+  .dossier-presse--link:hover::after
+    opacity 1
+
+  .hider
+    height 30px
+    position relative
+    background-color inherit
+
 
 .spacing
   display none
@@ -143,7 +159,7 @@ section, nav, footer
       a
         margin-top 10px
       &.open
-        height 104px
+        height 114px
 
   .spacing
     display block
