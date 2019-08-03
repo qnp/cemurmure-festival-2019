@@ -1,16 +1,16 @@
 // theses metas will be injected in by the html-webpack-plugin
 
-const title = 'Ce Murmure Festival 2018';
+const title = 'Ce Murmure Festival 2019';
 const fullURL = 'http://cemurmurefestival.com';
 
-const keywords = 'Ce Murmure, Festival, Semur-en-Auxois, 24 Août, 25 Août, 21140, Musique, Art, Animations, Numérique, Interactif, Fête, Buvette, Restauration, Danse, Party';
-const desc_search = 'Vous en rêvez depuis l’été dernier, le voici revenir au galop ! Le Festival Ce Murmure vous attend les 24 et 25 Août à Semur-en-Auxois.';
-const desc_social = 'Vous en rêvez depuis l’été dernier, le voici revenir au galop ! Le Festival Ce Murmure vous attend les 24 et 25 Août à Semur-en-Auxois.';
+const keywords = 'Ce Murmure, Festival, Semur-en-Auxois, 23 Août, 24 Août, 21140, Musique, Art, Animations, Numérique, Interactif, Fête, Buvette, Restauration, Danse, Party';
+const desc_search = 'Vous en rêvez depuis l’été dernier, le voici revenir au galop ! Le Festival Ce Murmure vous attend les 23 et 24 Août à Semur-en-Auxois.';
+const desc_social = 'Vous en rêvez depuis l’été dernier, le voici revenir au galop ! Le Festival Ce Murmure vous attend les 23 et 24 Août à Semur-en-Auxois.';
 const social_image = 'static/img/share/share.png';
 const twitter_card_type = 'summary_large_image';
 // const twitter_site = '';
 const twitter_creator = '@ekqnp';
-const theme_color = '#413A8F';
+const theme_color = '#86382E';
 
 module.exports = {
 
